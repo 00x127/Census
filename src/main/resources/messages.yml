@@ -1,0 +1,63 @@
+# census hover lines. one entry per line, shown when someone hovers the player
+# count on the server list.
+#
+# lines are written in minimessage and then converted to old style colour codes
+# for the server list, so we only get the 16 colours plus bold/italic and friends.
+# hex and gradients get flattened to the closest colour. gold is the orange one.
+#
+# placeholders. a line gets skipped for a ping if it uses one we cant fill
+# (unknown ip, geolocation off, no city etc), so a raw %thing% never gets shown:
+#   %country% %country_code% %city% %db_city% %region% %timezone%
+#   %local_time% %distance% %asn% %isp% %server_city% %server_country%
+# %city% comes from the timezone. %db_city% is the raw city from the db, which is
+# usually just the isp's town and less reliable.
+#
+# "messages" always rotate (depends on mode in config.yml). the morning,
+# afternoon, evening and night lists get added on top based on the player's local
+# time: morning 05-11, afternoon 12-17, evening 18-22, night 23-04.
+messages:
+  - "<gold>hovering is free, joining is also free</gold>"
+  - "<gold>you can stop inspecting the player count now</gold>"
+  - "<gold>yes, this is the hover text</gold>"
+  - "<gold>you've read this far, just join</gold>"
+  - "<gold>player count successfully hovered</gold>"
+  - "<gold>professional server list investigator</gold>"
+  - "<gold>this information was absolutely worth hovering for</gold>"
+  - "<gold>you can move your mouse now</gold>"
+  - "<gold>imagine if this actually said something useful</gold>"
+  - "<gold>you couldn't just leave the number alone</gold>"
+  - "<gold>this tooltip has no legal significance</gold>"
+  - "<gold>the server list appreciates your attention</gold>"
+  - "<gold>diagnosis: too much hovering</gold>"
+  - "<gold>the player count would like some privacy</gold>"
+  - "<gold>this is why we can't have simple player counts</gold>"
+  - "<gold>you're still reading this instead of joining</gold>"
+  - "<gold>you've turned one number into a whole situation</gold>"
+  - "<gold>%country% is a nice country, you should be proud</gold>"
+  - "<gold>you're ~%distance% km away and still pinging. dedication.</gold>"
+  - "<gold>a %country% ping - we don't get many of those.</gold>"
+  - "<gold>our server lives in %server_city%, you live in %city%. long-distance relationship.</gold>"
+  - "<gold>%timezone% gang, respect.</gold>"
+  - "<gold>%asn% says hello. so does your packet loss.</gold>"
+  - "<gold>that latency is %isp%'s fault, not ours.</gold>"
+  - "<gold>your pings are being logged. affectionately.</gold>"
+
+morning:
+  - "<gold>it's %local_time% in %city%. early bird, respect.</gold>"
+  - "<gold>it's %local_time% in %city%. coffee first, then blocks.</gold>"
+  - "<gold>it's %local_time% in %city%. morning, go touch some grass while it's fresh.</gold>"
+
+afternoon:
+  - "<gold>it's %local_time% in %city%. productive hours, allegedly.</gold>"
+  - "<gold>it's %local_time% in %city%. remember to eat something.</gold>"
+  - "<gold>it's %local_time% in %city%. peak hours, use them wisely.</gold>"
+
+evening:
+  - "<gold>it's %local_time% in %city%. go for a walk.</gold>"
+  - "<gold>it's %local_time% in %city%. touch grass, respectfully.</gold>"
+  - "<gold>it's %local_time% in %city%. evening plans: this server list.</gold>"
+
+night:
+  - "<gold>it's %local_time% in %city%. go to sleep.</gold>"
+  - "<gold>it's %local_time% in %city%. the server will still be here tomorrow.</gold>"
+  - "<gold>it's %local_time% in %city%. sleeping is free too, you know.</gold>"

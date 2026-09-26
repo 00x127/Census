@@ -1,0 +1,9 @@
+{
+  "id": "census",
+  "name": "Census",
+  "version": "1.0.0",
+  "description": "Shows rotating messages when someone hovers the player count on the server list.",
+  "authors": ["0x127"],
+  "dependencies": [],
+  "main": "dev.census.CensusPlugin"
+}

@@ -1,0 +1,22 @@
+# census config. restart the server after editing this.
+# the hover lines live in messages.yml and reload on the fly.
+
+enabled: true
+
+# how lines get picked: sequential, random, or static (always the first one)
+mode: sequential
+
+# pretend player numbers. -1 keeps the real ones. on plain spigot only max works
+fake-online: -1
+fake-max: -1
+
+# hide the count and the hover completely
+hide-players: false
+
+# your public address, for %server_city% and %distance%. blank turns those off
+server-host: ""
+
+# optional geolocation, off by default. drop geoip-city.mmdb and geoip-asn.mmdb
+# into this folder from https://db-ip.com, then flip this to true. turns on
+# %country% %city% %timezone% %local_time% %distance% %asn% and %isp%
+geoip-enabled: false

@@ -1,0 +1,16 @@
+# build output
+build/
+paper/build/
+
+# gradle / ide
+.gradle/
+.idea/
+*.iml
+
+# local run dirs
+run/
+paper/run/
+
+# logs and os junk
+*.log
+.DS_Store
