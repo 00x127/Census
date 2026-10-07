@@ -1,7 +1,6 @@
 package dev.census;
 
 import com.maxmind.db.Reader;
-
 import java.io.BufferedReader;
 import java.io.Closeable;
 import java.io.File;
